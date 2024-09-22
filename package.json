@@ -2,7 +2,8 @@
 	"scripts": {
 		"docs:dev": "vitepress dev docs2",
 		"docs:build": "vitepress build docs2",
-		"docs:preview": "vitepress preview docs2"
+		"docs:preview": "vitepress preview docs2",
+		"publish": "echo 'push changes to remote' && bash ./scripts/git-push.sh"
 	},
 	"devDependencies": {
 		"vitepress": "^1.3.4",
