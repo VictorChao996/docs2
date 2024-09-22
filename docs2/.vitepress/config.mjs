@@ -1,4 +1,14 @@
 import { defineConfig } from "vitepress";
+import { generateSidebar } from "vitepress-sidebar";
+
+const base = "/docs2/";
+//NOTE: https://vitepress-sidebar.cdget.com/ (auto sidebar generator)
+const vitepressSidebarOptions = {
+	documentRootPath: `${base}src`,
+	useTitleFromFileHeading: true,
+	excludeFolders: ["Navbar"],
+	collapsed: false
+};
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -9,26 +19,36 @@ export default defineConfig({
 		siteTitle: "Victor's Doc",
 		nav: [
 			{ text: "Home", link: "/" },
-			{ text: "Notes", link: "/notes" },
-			{ text: "Blog", link: "/blog" }
+			{ text: "Notes", link: "/Navbar/notes" },
+			{ text: "Blog", link: "/Navbar/blog" }
 		],
-
-		sidebar: [
-			{
-				// text: "Examples",
-				// items: [
-				// { text: "Markdown Examples", link: "/markdown-examples" },
-				// { text: "Runtime API Examples", link: "/api-examples" }
-				// ]
-				text: "Vitepress",
-				collapsed: true,
-				items: [
-					{ text: "vitepress", link: "/vitepress/notes" },
-					{ text: "Markdown Examples", link: "/vitepres/markdown-examples" },
-					{ text: "Runtime API Examples", link: "/vitepress/api-examples" }
-				]
-			}
-		],
+		sidebar: generateSidebar(vitepressSidebarOptions),
+		// sidebar: [
+		// 	{
+		// 		// text: "Examples",
+		// 		// items: [
+		// 		// { text: "Markdown Examples", link: "/markdown-examples" },
+		// 		// { text: "Runtime API Examples", link: "/api-examples" }
+		// 		// ]
+		// 	},
+		// 	{
+		// 		text: "Vitepress",
+		// 		collapsed: true,
+		// 		items: [
+		// 			{ text: "vitepress", link: "/vitepress/notes" },
+		// 			{ text: "Markdown Examples", link: "/vitepress/markdown-extension-examples" },
+		// 			{ text: "Runtime API Examples", link: "/vitepress/api-examples" }
+		// 		]
+		// 	},
+		// 	{
+		// 		text: "Commands",
+		// 		items: [{ text: "git", link: "command/git" }]
+		// 	},
+		// 	{
+		// 		text: "Other",
+		// 		items: [{ text: "GitHub-pages", link: "other/Github-Pages" }]
+		// 	}
+		// ],
 
 		socialLinks: [
 			{ icon: "github", link: "https://github.com/VictorChao996" },
@@ -50,7 +70,7 @@ export default defineConfig({
 		},
 		editLink: true
 	},
-	base: "/docs2/",
+	base: base,
 	srcDir: "src"
 });
 

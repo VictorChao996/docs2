@@ -1,4 +1,4 @@
-# Vitepress
+# Vitepress note
 
 ## config settings for future use
 > 有機會應用於 personal docs 的設定

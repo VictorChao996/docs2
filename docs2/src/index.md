@@ -9,10 +9,10 @@ hero:
   actions:
     - theme: brand
       text: View notes
-      link: /notes
+      link: /Navbar/notes
     - theme: alt
       text: See Resource
-      link: https://github.com/vuejs/vitepress
+      link: https://github.com/VictorChao996/docs2
 
 features:
   - title: Content First
