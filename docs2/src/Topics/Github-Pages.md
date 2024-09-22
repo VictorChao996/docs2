@@ -15,7 +15,7 @@ GitHub 官方提供的服務，讓使用者可以透過 Github repo 快速部屬
     >6. wait for the github actions to set the deploy.
     >7. DONE!
 
-![screen shot](../_media/github_page_settings.png)
+
 - github pages 也可以使用自己的域名: 
 
 !>除了 `<username>.github.io` repo 產生的網站會部屬在 `https://<username>.github.io`，其餘公開設置好的 repo 預設會使用 `https://<username>.github.io/<repoName>` 作為網站連結。 **要特別注意 route 的問題**。
